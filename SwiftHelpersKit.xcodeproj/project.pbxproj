@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		676359C54956E6057A3A4A88 /* ColorsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03735181A11DD80BF7D76A /* ColorsHelper.swift */; };
 		6B5D0146C293BB18308FBCE0 /* OrientationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8959F91511E92295852C908 /* OrientationHelper.swift */; };
 		A55B753028231F965E6F4D2E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49CD6ADEDFDEC26C659AE8E /* Alert.swift */; };
-		A6AC0FA348714D696F3054AB /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05ECFCDD67633367B6C44B1 /* Base64.swift */; };
 		A6E9B3B194E17D9A196CBD6D /* AnyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A570F76F9ADF1CECEFD89E09 /* AnyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B678167193970B598E2E90C1 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13C8FA0EFD74885C82AB13 /* ViewHelper.swift */; };
 		C4CFC592237B9A6601E480C1 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53F629EDF39C46B2870668 /* KeyboardHelper.swift */; };
@@ -29,7 +28,6 @@
 		7EF721DF4CDFDFD16B41CAC0 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		9BE3828679D045F87D064418 /* GIFHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFHelper.swift; sourceTree = "<group>"; };
 		A570F76F9ADF1CECEFD89E09 /* AnyFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyFramework.h; sourceTree = "<group>"; };
-		B05ECFCDD67633367B6C44B1 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		C8959F91511E92295852C908 /* OrientationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationHelper.swift; sourceTree = "<group>"; };
 		CA03A271C8C73A2CD338F8A1 /* levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levenshtein.swift; sourceTree = "<group>"; };
 		E49CD6ADEDFDEC26C659AE8E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 		F7BA3EBC5BAC00EB1BEB5AF0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B05ECFCDD67633367B6C44B1 /* Base64.swift */,
 				9BE3828679D045F87D064418 /* GIFHelper.swift */,
 			);
 			path = Images;
@@ -256,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55B753028231F965E6F4D2E /* Alert.swift in Sources */,
-				A6AC0FA348714D696F3054AB /* Base64.swift in Sources */,
 				676359C54956E6057A3A4A88 /* ColorsHelper.swift in Sources */,
 				333029794271CD0E99703FFA /* GIFHelper.swift in Sources */,
 				C4CFC592237B9A6601E480C1 /* KeyboardHelper.swift in Sources */,
