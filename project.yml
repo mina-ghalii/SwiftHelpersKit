@@ -22,7 +22,7 @@ settings:
       SWIFT_ACTIVE_COMPILATION_CONDITIONS: PRODRELEASE
 
 options:
-  bundleIdPrefix: me.valify
+  bundleIdPrefix: me.minaghali
   createIntermediateGroups: true
   deploymentTarget:
     iOS: "13.0"
@@ -46,7 +46,7 @@ targets:
             INFOPLIST_FILE: SwiftHelpersKit/Conf/Info.plist # info.plist directory
             CODE_SIGN_STYLE: Automatic
             SWIFT_VERSION: 5.0
-            PRODUCT_BUNDLE_IDENTIFIER: com.mina.SwiftHelpersKit
-            ENABLE_BITCODE: 'YES'
+            PRODUCT_BUNDLE_IDENTIFIER: com.minaghali.SwiftHelpersKit
+
 
 

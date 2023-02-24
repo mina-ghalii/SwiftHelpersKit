@@ -7,5 +7,6 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, "13.0" 
   spec.summary = 'This pod is to share and contribute swift helper classes'
   spec.source = { :git => 'https://github.com/mina-ghalii/SwiftHelpersKit.git', :tag => 'v1.0.0' } 
-  spec.source_files = 'SwiftHelpersKit/Source/**/*.swift'
+  spec.source_files = 'SwiftHelpersKit/**/*.swift'
+
 end
