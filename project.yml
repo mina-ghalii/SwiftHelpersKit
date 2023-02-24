@@ -28,15 +28,10 @@ options:
     iOS: "13.0"
 
 targets:
-  SwiftHelpersKitApp: # Main App Target
-    type: application # this means that this target is the main application
+  SwiftHelpersKit: #Framework tagret
+    type: framework #this means that this target is of type Framework
     platform: iOS
-    sources: ["SwiftHelpersKitApp"] #directory for the code of this target
-    scheme: # set schemes that defined above
-      configVariants:
-        - Development
-        - Staging
-        - Production
+    sources: ["SwiftHelpersKit"] #directory for the code of this target
     preBuildScripts: # add build scripts like swiftlint
       - name: "SwiftLint"
         script: |
@@ -46,17 +41,6 @@ targets:
                 else
                     echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
                 fi
-    dependencies: #dependacies of the application
-    - target: SwiftHelpersKit # depends on AnyFramework target
-    settings:
-        base:
-            INFOPLIST_FILE: SwiftHelpersKitApp/Conf/Info.plist # info.plist directory
-            PRODUCT_BUNDLE_IDENTIFIER: com.mina.SwiftHelpersKitApp
-            CODE_SIGN_STYLE: Automatic
-  SwiftHelpersKit: #Framework tagret
-    type: framework #this means that this target is of type Framework
-    platform: iOS
-    sources: ["SwiftHelpersKit"] #directory for the code of this target
     settings:
         base:
             INFOPLIST_FILE: SwiftHelpersKit/Conf/Info.plist # info.plist directory

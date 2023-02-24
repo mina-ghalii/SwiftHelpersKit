@@ -27,7 +27,6 @@ format:
 
 setup: # run this to setup the project with command 'make setup' at the project directory
 	make clean
-	bundler install # install bundler will install the dependacies in the Gemfile
 	brew bundle #install brew dependacies in the Brewfile
 	make project
 
