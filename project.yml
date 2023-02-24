@@ -1,0 +1,68 @@
+name: SwiftHelpersKit # set project name
+configs: # configurations to create schemes
+  Development Debug: debug
+  Staging Debug: debug
+  Production Debug: debug
+  Development Release: release
+  Staging Release: release
+  Production Release: release
+settings:
+  configs: # configurations to create schemes
+    Development Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEVELDEBUG
+    Staging Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: STAGDEBUG
+    Production Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: PRODDEBUG
+    Development Release:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEVELRELEASE
+    Staging Release:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: STAGERELEASE
+    Production Release:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: PRODRELEASE
+
+options:
+  bundleIdPrefix: me.valify
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "13.0"
+
+targets:
+  SwiftHelpersKitApp: # Main App Target
+    type: application # this means that this target is the main application
+    platform: iOS
+    sources: ["SwiftHelpersKitApp"] #directory for the code of this target
+    scheme: # set schemes that defined above
+      configVariants:
+        - Development
+        - Staging
+        - Production
+    preBuildScripts: # add build scripts like swiftlint
+      - name: "SwiftLint"
+        script: |
+                export PATH="$PATH:/opt/homebrew/bin"
+                if which swiftlint > /dev/null; then
+                    swiftlint
+                else
+                    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                fi
+    dependencies: #dependacies of the application
+    - target: SwiftHelpersKit # depends on AnyFramework target
+    settings:
+        base:
+            INFOPLIST_FILE: SwiftHelpersKitApp/Conf/Info.plist # info.plist directory
+            PRODUCT_BUNDLE_IDENTIFIER: com.mina.SwiftHelpersKitApp
+            CODE_SIGN_STYLE: Automatic
+  SwiftHelpersKit: #Framework tagret
+    type: framework #this means that this target is of type Framework
+    platform: iOS
+    sources: ["SwiftHelpersKit"] #directory for the code of this target
+    settings:
+        base:
+            INFOPLIST_FILE: SwiftHelpersKit/Conf/Info.plist # info.plist directory
+            CODE_SIGN_STYLE: Automatic
+            SWIFT_VERSION: 5.0
+            PRODUCT_BUNDLE_IDENTIFIER: com.mina.SwiftHelpersKit
+            ENABLE_BITCODE: 'YES'
+
+
