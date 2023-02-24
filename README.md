@@ -14,7 +14,8 @@ https://mina-ghali.gitbook.io/swifthelperskit-v1.0.0
 To install this project on your macboook and to get the .xcodeproj file, write in the terminal of the project directory `make setup`.
 
 ## Contribution
-Fork this repo and add the utilites that you want, then make a merge request.
+Fork this repo and add the utilites that you want -> add .xcodeproj file in the .gitignore file -> push the code -> make a merge request.
+
 
 
 

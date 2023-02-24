@@ -2,7 +2,6 @@ vendor
 Pods
 Carthage
 
-*.xcodeproj
 *.xcworkspace
 *.zip
 default.profraw
